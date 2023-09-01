@@ -26,7 +26,7 @@
             #canvas {
                 border: 2px solid #333; /* Add a border to the canvas */
                 border-radius: 8px; /* Add rounded corners for a better look */
-                width:600px; /* Ensure the canvas does not overflow its parent */
+                width:550px; /* Ensure the canvas does not overflow its parent */
                 height: 550px;
             }
 
@@ -82,7 +82,7 @@
                 maxPredictions = model.getTotalClasses();
         
                 // Convenience function to setup a webcam
-                const size = 600;
+                const size = 550;
                 const flip = true; // whether to flip the webcam
                 webcam = new tmPose.Webcam(size, size, flip); // width, height, flip
                 await webcam.setup(); // request access to the webcam
