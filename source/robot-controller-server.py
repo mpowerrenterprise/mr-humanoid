@@ -28,6 +28,8 @@ async def handler(websocket, path):
     elif data == "[FULL]":
         servo_pin.write(180)
 
+    
+
  
     #reply = f"Data recieved as: {data}!"
     #await websocket.send(reply)
