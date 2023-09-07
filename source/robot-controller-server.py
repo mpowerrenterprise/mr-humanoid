@@ -29,8 +29,6 @@ async def handler(websocket, path):
         servo_pin.write(180)
 
     
-
- 
     #reply = f"Data recieved as: {data}!"
     #await websocket.send(reply)
  
