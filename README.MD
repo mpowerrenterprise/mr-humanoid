@@ -17,9 +17,9 @@
 
 ## 01 Introduction
 
-![Circuit Diagram](docs/media/3-banner-image.png)
-
 It is a humanoid robot powered by Arduino and AI, responding to humans' poses and voice commands. This robot has two significant features: it can work with human postures, mimic arm movements, listen to humans, and move its arms and head according to voice inputs.
+
+![Circuit Diagram](docs/media/3-banner-image.png)
 
 ## 02 Technology Stack
 
