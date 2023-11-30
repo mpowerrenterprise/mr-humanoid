@@ -17,6 +17,8 @@
 
 ## 01 Introduction
 
+![Circuit Diagram](docs/media/3-banner-image.png)
+
 It is a humanoid robot powered by Arduino and AI, responding to humans' poses and voice commands. This robot has two significant features: it can work with human postures, mimic arm movements, listen to humans, and move its arms and head according to voice inputs.
 
 ## 02 Technology Stack
@@ -32,7 +34,7 @@ It is a humanoid robot powered by Arduino and AI, responding to humans' poses an
 
 - Python 3.8.5
 - Arduino IDE (Framework)
-- OpenCV pyfirmata
+- OpenCV
 - Mediapipe 0.10.3
 - PyFirmata
 - SpeechRecognition
@@ -82,4 +84,41 @@ We will now install the necessary software and configure the AI to gain access t
   pip install -r requirements.txt
   ```
 
-## 04 Execution
+## 04 Usage
+
+We have two Python programs: **0-pose-based-main.py (Pose-based)** and **1-voice-based-main.py (Voice-based)**:
+
+- **Pose-based:** This program utilizes OpenCV and MediaPipe to track and mimic the movement of a human arm.
+
+- **Voice-based:** This program utilizes Speech Recognition technology to listen to human voices and carry out instructions.
+
+- **Source Directory:**
+
+  ```
+  mr-humanoid\source
+
+      * 0-pose-based-main.py
+      * 1-voice-based-main.py
+  ```
+
+### 4.1 Setps to run
+
+- **Step 01:** Connect the Arduino to the development computer.
+
+- **Step 02:** Modify the script to reflect the appropriate COM port.
+
+  ![Change COM Port](docs/media/2-change-com-port.png)
+
+- **Step 03:** To run the Pose-based app.
+
+  ```
+  python 0-pose-based-main.py
+  ```
+
+- **Step 04:** To run the Voice-based app.
+
+  ```
+  python 1-voice-based-main.py
+  ```
+
+### 4.2 Output
