@@ -38,9 +38,9 @@ It is a humanoid robot powered by Arduino and AI, responding to humans' poses an
 - SpeechRecognition
 - PyAudio
 
-## 3.0 Setup
+## 03 Setup
 
-## 3.1 Hardware Setup
+### 3.1 Hardware Setup
 
 ![Circuit Diagram](docs/media/0-circuit-diagram.png)
 
@@ -50,10 +50,36 @@ It is a humanoid robot powered by Arduino and AI, responding to humans' poses an
 | **Right Arm** | Pin: 12 |
 | **Head**      | Pin: 11 |
 
-## 3.2 Firmware Setup
+### 3.2 Firmware Setup
 
-It is necessary to set up the Arduino firmware to enable communication between Python and Arduino. The Firmata protocol establishes serial communication between a Python script and an Arduino.
+Setting up the Arduino firmware is necessary to enable communication between Python and Arduino. The Firmata protocol establishes serial communication between a Python script and an Arduino.
 
 To upload Firmata, open Arduino IDE and choose the correct COM port and **file -> Examples -> Firmata -> StandardFirmata -> Upload to Arduino UNO Board**.
 
 ![Firmware Setup](docs/media/1-firmware-setup.png)
+
+**Note:** After uploading StandardFirmata to the Arduino Board, Python can be used to program it.
+
+### 3.3 Setup Software
+
+We will now install the necessary software and configure the AI to gain access to the Arduino Board. This project utilizes essential libraries, including Speech Recognition, MediaPipe, and OpenCV. We need to install all the required dependencies on the development computer.
+
+- **Step 01:** Install Python
+
+  ```
+  Ver: 3.8.5 is Recommended (www.python.org)
+  ```
+
+- **Step 02:** Navigate to the specified location in CMD/Terminal.
+
+  ```
+  mr-humanoid/docs/requirements.txt
+  ```
+
+- **Step 03:** Execute the given command to install all dependencies.
+
+  ```
+  pip install -r requirements.txt
+  ```
+
+## 04 Execution
