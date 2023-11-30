@@ -130,3 +130,27 @@ We have two Python programs: **0-pose-based-main.py (Pose-based)** and **1-voice
 ![Output Pose 3](docs/media/6-output-pose-3.jpg)
 
 ![Output Voice 1](docs/media/7-output-voice.jpg)
+
+### 4.2 Voice Commands
+
+| Voice Commands      |
+| ------------------- |
+| **right hand up**   |
+| **left hand up**    |
+| **right hand down** |
+| **left hand down**  |
+| **hands up**        |
+| **hands down**      |
+| **head left**       |
+| **head right**      |
+| **head forward**    |
+
+## Social Links
+
+- [Linkedin Profile](https://www.linkedin.com/in/gunarakulangunaretnam)
+- [Facebook Profile](https://www.facebook.com/gunarakulangunaratnam)
+- [Instagram Profile](https://www.instagram.com/gunarakulangunaretnam)
+- [Twitter Profile ](https://twitter.com/gunarakulangr)
+- [Kaggle Profile](https://www.kaggle.com/gunarakulangr)
+- [TikTok Profile](https://www.tiktok.com/@gunarakulangunaretnam)
+- [Youtube Profile](https://www.youtube.com/channel/UCMWkED5sabgVZSCKjZuRJXA)
