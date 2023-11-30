@@ -131,7 +131,7 @@ We have two Python programs: **0-pose-based-main.py (Pose-based)** and **1-voice
 
 ![Output Voice 1](docs/media/7-output-voice.jpg)
 
-### 4.2 Voice Commands
+### 4.3 Voice Commands
 
 | Voice Commands      |
 | ------------------- |
