@@ -56,7 +56,7 @@ It is a humanoid robot powered by Arduino and AI, responding to humans' poses an
 
 Setting up the Arduino firmware is necessary to enable communication between Python and Arduino. The Firmata protocol establishes serial communication between a Python script and an Arduino.
 
-To upload Firmata, open Arduino IDE and choose the correct COM port and **file -> Examples -> Firmata -> StandardFirmata -> Upload to Arduino UNO Board**.
+To upload Firmata, open Arduino IDE and choose the correct COM port and **File -> Examples -> Firmata -> StandardFirmata -> Upload to Arduino UNO Board**.
 
 ![Firmware Setup](docs/media/1-firmware-setup.png)
 
