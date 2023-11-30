@@ -123,7 +123,7 @@ We have two Python programs: **0-pose-based-main.py (Pose-based)** and **1-voice
 
 ### 4.2 Output
 
-<img src="docs/media/4-output-pose-1.gif" alt="Output Pose 1" style="width:100%; height:auto;">
+<img src="docs/media/4-output-pose-1.gif" alt="Output Pose 1" width="100%">
 
 ![Output Pose 2](docs/media/5-output-pose-2.jpg)
 
