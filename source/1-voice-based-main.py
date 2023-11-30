@@ -11,8 +11,8 @@ port = 'COM3'  # Change 'COM3' to your Arduino's serial port
 board = Arduino(port)
 
 left_hand = board.get_pin('d:13:s')  # Digital output pin 13
-right_hand = board.get_pin('d:9:s')  # Digital output pin 9
-head = board.get_pin('d:11:s')  # Digital output pin 9
+right_hand = board.get_pin('d:12:s')  # Digital output pin 12
+head = board.get_pin('d:11:s')  # Digital output pin 11
 
 left_hand.write(0)
 right_hand.write(170)
