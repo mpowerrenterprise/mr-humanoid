@@ -122,3 +122,11 @@ We have two Python programs: **0-pose-based-main.py (Pose-based)** and **1-voice
   ```
 
 ### 4.2 Output
+
+![Output Pose 1](docs/media/4-output-pose-1.gif)
+
+![Output Pose 2](docs/media/5-output-pose-2.jpg)
+
+![Output Pose 3](docs/media/6-output-pose-3.jpg)
+
+![Output Voice 1](docs/media/7-output-voice.jpg)
