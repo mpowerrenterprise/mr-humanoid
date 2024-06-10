@@ -1,4 +1,4 @@
-# MR. HUMANOID
+# MR.HUMANOID
 
 ## Repo Structure
 
@@ -145,7 +145,7 @@ We have two Python programs: **0-pose-based-main.py (Pose-based)** and **1-voice
 | **head right**      |
 | **head forward**    |
 
-# CONTACT
+# Contact
 
 ### Website: 
 
