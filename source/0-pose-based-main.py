@@ -2,6 +2,7 @@ import cv2
 import mediapipe as mp
 import math
 import numpy as np
+import time
 from pyfirmata import Arduino, util
 
 # Define the serial port (check your Arduino IDE for the correct port)
@@ -10,19 +11,22 @@ port = 'COM3'  # Change 'COM3' to your Arduino's serial port
 # Create a new Arduino board instance
 board = Arduino(port)
 
+# Allow time for the board to initialize
+time.sleep(2)
+
 # Define the LED pins for left and right hands (e.g., pin 13 for left hand, pin 9 for right hand)
 left_hand = board.get_pin('d:13:s')  # Digital output pin 13
 right_hand = board.get_pin('d:12:s')  # Digital output pin 12
 head = board.get_pin('d:11:s')  # Digital output pin 11
 
-left_hand.write(0)
-right_hand.write(170)
+left_hand.write(180)
+right_hand.write(0)
 head.write(90)
 
 mp_drawing = mp.solutions.drawing_utils
 mp_holistic = mp.solutions.holistic
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(2)
 
 # Initialize the minimum and maximum distance values for left and right hands
 min_distance_left = float('inf')
@@ -119,10 +123,10 @@ with mp_holistic.Holistic(min_detection_confidence=0.3, min_tracking_confidence=
             cv2.circle(image, (midpoint_x_right, midpoint_y_right), 8, (255, 0, 0), -1)  # -1 to fill the circle
 
             # Calculate the rotation angle for left hand
-            rotation_value_left = np.interp(int(distance_in_pixels_left), [min_range_left, max_range_left], [0, 180])
+            rotation_value_left = np.interp(int(distance_in_pixels_left), [min_range_left, max_range_left],[180, 0])
 
             # Calculate the rotation angle for right hand
-            rotation_value_right = np.interp(int(distance_in_pixels_right), [min_range_right, max_range_right], [170, 0])
+            rotation_value_right = np.interp(int(distance_in_pixels_right), [min_range_right, max_range_right],[0, 180])
 
             # Control the left and right hand rotation using the Arduino
             left_hand.write(rotation_value_left)
@@ -132,6 +136,10 @@ with mp_holistic.Holistic(min_detection_confidence=0.3, min_tracking_confidence=
 
         if cv2.waitKey(10) & 0xFF == ord('q'):
             break
+
+# Allow time for the servos to move to the positions
+time.sleep(2)  # Adjust time as needed
+
 
 board.exit()
 cap.release()

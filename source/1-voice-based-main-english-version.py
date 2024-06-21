@@ -1,3 +1,4 @@
+import time
 import speech_recognition as sr
 from pyfirmata import Arduino, util
 
@@ -10,12 +11,16 @@ port = 'COM3'  # Change 'COM3' to your Arduino's serial port
 # Create a new Arduino board instance
 board = Arduino(port)
 
+# Allow time for the board to initialize
+time.sleep(2)
+
+# Define the LED pins for left and right hands (e.g., pin 13 for left hand, pin 9 for right hand)
 left_hand = board.get_pin('d:13:s')  # Digital output pin 13
 right_hand = board.get_pin('d:12:s')  # Digital output pin 12
 head = board.get_pin('d:11:s')  # Digital output pin 11
 
-left_hand.write(0)
-right_hand.write(170)
+left_hand.write(180)
+right_hand.write(0)
 head.write(90)
 
 while True:
@@ -36,24 +41,24 @@ while True:
             print(f"Out: {dataText}")
 
             if "right hand up" in dataText:
-                right_hand.write(0)
+                right_hand.write(180)
 
             elif "left hand up" in dataText:
-                left_hand.write(180)
+                left_hand.write(0)
 
             elif "right hand down" in dataText:
-                right_hand.write(170)
-
-            elif "left hand down" in dataText:
-                left_hand.write(0)
-
-            elif "hands up" in dataText or "handsome" in dataText:
-                left_hand.write(180)
                 right_hand.write(0)
 
-            elif "hands down" in dataText:
+            elif "left hand down" in dataText:
+                left_hand.write(180)
+
+            elif "hands up" in dataText or "handsome" in dataText:
                 left_hand.write(0)
-                right_hand.write(170)
+                right_hand.write(180)
+
+            elif "hands down" in dataText:
+                left_hand.write(180)
+                right_hand.write(0)
 
             elif "head left" in dataText:
                 head.write(180)
@@ -61,12 +66,14 @@ while True:
             elif "head right" in dataText or "headlight" in dataText:
                 head.write(0)
 
-            elif "head forward" in dataText:
+            elif "head forward" in dataText or "look straight" in dataText:
                 head.write(90)
-
 
         except Exception as e:
             print(e)
-            
+
+
+# Allow time for the servos to move to the positions
+time.sleep(2)  # Adjust time as needed      
 
 board.exit()
