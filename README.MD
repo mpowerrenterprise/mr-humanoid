@@ -84,6 +84,12 @@ We will now install the necessary software and configure the AI to gain access t
   pip install -r requirements.txt
   ```
 
+- **Step 04 (Anaconda Env):** If you're using Anaconda, you can set up an environment that includes all the necessary dependencies.
+
+  ```
+   conda env create -f environment.yml
+  ```
+
 ## 04 Usage
 
 We have two Python programs: **0-pose-based-main.py (Pose-based)** and **1-voice-based-main.py (Voice-based)**:
