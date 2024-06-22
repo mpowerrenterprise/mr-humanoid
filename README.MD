@@ -9,15 +9,17 @@
     │   ├── 1-web-based-prototype-v1.0.0           # Contains a web app trained using Teachable Machine.
     │   ├── 2-desktop-based-prototype-v1.0.0       # Contains py apps basic prototypes.
     ├── source                                 # Contains main source code.
-    │   ├── 0-pose-based-main.py                   # pose-based version
-    │   ├── 1-voice-based-main.py                  # voice-based version
+    │   ├── 0-robot-resetter.py                    # Reset robot to default position.
+    │   ├── 1-pose-based-main.py                   # Pose-based version.
+    │   ├── 2-voice-based-main-english-version     # Voice-based English version.
+    │   ├── 3-voice-based-main-tamil-version       # voice-based Tamil version.
     └── README.MD                              # Readme Content.
 
 ```
 
 ## 01 Introduction
 
-It is a humanoid robot powered by Arduino and AI, responding to humans' poses and voice commands. This robot has two significant features: it can work with human postures, mimic arm movements, listen to humans, and move its arms and head according to voice inputs.
+This humanoid robot, powered by Arduino and AI, boasts impressive capabilities. It can interpret human poses, mimic arm movements, and respond to voice commands in both Tamil and English. Additionally, it can articulate its arms and head in response to voice inputs, making it versatile and interactive in multilingual environments. This dual-language functionality enhances its usability and appeal across diverse user bases.
 
 ![Circuit Diagram](docs/media/3-banner-image.png)
 
@@ -92,19 +94,26 @@ We will now install the necessary software and configure the AI to gain access t
 
 ## 04 Usage
 
-We have two Python programs: **0-pose-based-main.py (Pose-based)** and **1-voice-based-main.py (Voice-based)**:
+We have four Python programs:
+
+- **Robot Resetter:** This script resets the robot to its default position. After removing the robot's arms and head, running this script readjusts all motors to their correct positions. Then, you can manually position the arms downwards and align the head to look straight ahead for setup.
 
 - **Pose-based:** This program utilizes OpenCV and MediaPipe to track and mimic the movement of a human arm.
 
-- **Voice-based:** This program utilizes Speech Recognition technology to listen to human voices and carry out instructions.
+- **Voice-based English:**  This program employs Speech Recognition technology to understand and execute instructions spoken in the English language.
+
+- **Voice-based Tamil:** This program utilizes Speech Recognition technology to comprehend and execute instructions spoken in the Tamil language.
 
 - **Source Directory:**
 
   ```
   mr-humanoid\source
 
-      * 0-pose-based-main.py
-      * 1-voice-based-main.py
+      * 0-robot-resetter.py
+      * 1-pose-based-main.py
+      * 2-voice-based-main-english-version.py
+      * 3-voice-based-main-tamil-version.py
+
   ```
 
 ### 4.1 Setps to run
@@ -115,16 +124,29 @@ We have two Python programs: **0-pose-based-main.py (Pose-based)** and **1-voice
 
   ![Change COM Port](docs/media/2-change-com-port.png)
 
-- **Step 03:** To run the Pose-based app.
+
+- **Step 03:** To reset the robot.
 
   ```
-  python 0-pose-based-main.py
+  python 0-robot-resetter.py
   ```
 
-- **Step 04:** To run the Voice-based app.
+- **Step 04:** To run the Pose-based app.
 
   ```
-  python 1-voice-based-main.py
+  python 1-pose-based-main.py
+  ```
+
+- **Step 05:** To run the voice-based English version app.
+
+  ```
+  python 2-voice-based-main-english-version.py
+  ```
+
+- **Step 06:** To run the voice-based Tamil version app.
+
+  ```
+  python 3-voice-based-main-tamil-version.py
   ```
 
 ### 4.2 Output
@@ -137,7 +159,10 @@ We have two Python programs: **0-pose-based-main.py (Pose-based)** and **1-voice
 
 ![Output Voice 1](docs/media/7-output-voice.jpg)
 
-### 4.3 Voice Commands
+
+# 05 Documentation
+
+## 5.1 Voice Commands English
 
 | Voice Commands      |
 | ------------------- |
@@ -150,6 +175,50 @@ We have two Python programs: **0-pose-based-main.py (Pose-based)** and **1-voice
 | **head left**       |
 | **head right**      |
 | **head forward**    |
+
+
+## 5.1 Voice Commands Tamil
+
+| Voice Commands                           |
+| ---------------------------------------- |
+| **வலது கையை தூக்கவும்**                  |
+| **வலது கையை மேல் நோக்கி உயர்த்தவும்**    |
+| **வலது கையை மேல் நோக்கி தூக்கவும்**    |
+| **வலது கையை உயர்த்தவும்**                 |
+| **வலது கையை மேல் நோக்கி எழுப்பவும்**     |
+| **வலது பக்க கையை உயர்த்தவும்**             |
+| **கையை உயர்த்தவும்**                       |
+| **வலது பக்க கையை மேல் நோக்கி உயர்த்தவும்** |
+| **இடது கையை தூக்கவும்**                  |
+| **இடது கையை மேல் நோக்கி உயர்த்தவும்**    |
+| **இடது கையை மேல் நோக்கி தூக்கவும்**    |
+| **இடது கையை உயர்த்தவும்**                 |
+| **இடது கையை மேல் நோக்கி எழுப்பவும்**     |
+| **இடது பக்க கையை உயர்த்தவும்**             |
+| **இடது பக்க கையை உயர்த்தவும்**              |
+| **இடது பக்க கையை மேல் நோக்கி உயர்த்தவும்** |
+| **வலது கையை கீழே இரக்கவும்**               |
+| **வலது கையை கீழ் நோக்கி இரக்கவும்**       |
+| **வலது கையை கீழே விடவும்**                 |
+| **வலது கையை கீழே பதிக்கவும்**              |
+| **வலது கையை கீழ் நோக்கி விடவும்**         |
+| **வலது பக்க கையை பதிக்கவும்**              |
+| **வலது பக்க கையை கீழ் நோக்கி இரக்கவும்**  |
+| **வலது பக்க கையை இரக்கவும்**               |
+| **இடது கையை கீழே இரக்கவும்**               |
+| **இடது கையை கீழ் நோக்கி இரக்கவும்**       |
+| **இடது கையை கீழே விடவும்**                 |
+| **இடது கையை கீழே பதிக்கவும்**              |
+| **இடது கையை கீழ் நோக்கி விடவும்**         |
+| **இடது பக்க கையை பதிக்கவும்**              |
+| **இடது பக்க கையை பதிக்கவும்**               |
+| **இடது பக்க கையை கீழ் நோக்கி இரக்கவும்**  |
+| **நேரே பார்க்கவும்**                       |
+| **முன் நோக்கி பார்க்கவும்**                 |
+| **தலையை முன் நோக்கி பார்க்கவும்**         |
+| **தலையை முன் பக்கம் வைக்கவும்**           |
+
+
 
 # Contact
 
