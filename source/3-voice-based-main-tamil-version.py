@@ -40,33 +40,34 @@ while True:
 
             print(f"Out: {dataText}")
 
-            if "வலது கையை தூக்கவும்" in dataText:
+            if "வலது கையை தூக்கவும்" in dataText or "வலது கையை மேல் நோக்கி உயர்த்தவும்" in dataText or "வலது கையை மேல் நோக்கி தூக்கவும்" in dataText or "வலது கையை உயர்த்தவும்" in dataText or "வலது கையை மேல் நோக்கி எழுப்பவும்" in dataText or "வலது பக்க கையை உயர்த்தவும் " in dataText or " கையை உயர்த்தவும்" in dataText or "வலது பக்க கையை மேல் நோக்கி உயர்த்தவும்" in dataText:
                 right_hand.write(180)
 
-            elif "left hand up" in dataText:
+
+            if "இடது கையை தூக்கவும்" in dataText or "இடது கையை மேல் நோக்கி உயர்த்தவும்" in dataText or "இடது கையை மேல் நோக்கி தூக்கவும்" in dataText or "இடது கையை உயர்த்தவும்" in dataText or "இடது கையை மேல் நோக்கி எழுப்பவும்" in dataText or "இடது பக்க கையை உயர்த்தவும்" in dataText or "இடது பக்க கையை உயர்த்தவும் " in dataText or "இடது பக்க கையை மேல் நோக்கி உயர்த்தவும்" in dataText:
                 left_hand.write(0)
 
-            elif "right hand down" in dataText:
+            if "வலது கையை கீழே இரக்கவும்" in dataText or "வலது கையை கீழ் நோக்கி இரக்கவும்" in dataText or "வலது கையை கீழே விடவும்" in dataText or "வலது கையை கீழே பதிக்கவும்" in dataText or "வலது கையை கீழ் நோக்கி விடவும்" in dataText or "வலது பக்க கையை பதிக்கவும் " in dataText or " வலது பக்க கையை கீழ் நோக்கி இரக்கவும்" in dataText or "வலது பக்க கையை இரக்கவும்" in dataText:
                 right_hand.write(0)
 
-            elif "left hand down" in dataText:
+            if "இடது கையை கீழே இரக்கவும்" in dataText or "இடது கையை கீழ் நோக்கி இரக்கவும்" in dataText or "இடது கையை கீழே விடவும்" in dataText or "இடது கையை கீழே பதிக்கவும்" in dataText or "இடது கையை கீழ் நோக்கி விடவும்" in dataText or "இடது பக்க கையை பதிக்கவும் " in dataText or " இடது பக்க கையை கீழ் நோக்கி இரக்கவும்" in dataText or "இடது பக்க கையை இரக்கவும்" in dataText:
                 left_hand.write(180)
 
-            elif "hands up" in dataText or "handsome" in dataText:
+            elif "கைகளை உயர்த்தவும்" in dataText or "கைகளை தூக்கவும்" in dataText or "கைகளை மேலே தூக்கவும்" in dataText or "கைகளை மேலே உயர்த்தவும்" in dataText or "இரண்டு கைகளையும் மேலே கொண்டு செல்லவும்" in dataText or "இரு கைகளையும் மேலே உயர்த்தவும்" in dataText:
                 left_hand.write(0)
                 right_hand.write(180)
 
-            elif "hands down" in dataText:
+            elif "கைகளை இரக்கவும்" in dataText or "கைகளை கீழே விடவும்" in dataText or "கைகளை விடவும்" in dataText or "கைகளை மேலே உயர்த்தவும்" in dataText or "இரண்டு கைகளையும் கீழ் நோக்கி கொண்டு செல்லவும்" in dataText or "இரு கைகளையும் பதிக்கவும்" in dataText:
                 left_hand.write(180)
                 right_hand.write(0)
 
-            elif "head left" in dataText:
+            elif "இடது பக்கம் தலையை திருப்பவும்" in dataText or "இடது பக்கம் தலையை நகர்த்தவும்" in dataText or "தலையை இடதுபக்கம்திருப்பவும்" in dataText or "இட பக்கம் தலையை நகர்த்தவும்" in dataText or "இட பக்கம் தலையை திருப்பவும்" in dataText or "தலையை இட பக்கம்திருப்பவும்" in dataText or "தலையை இட பக்கம் கிறுக்கவும்" in dataText or "தலையை இடது பக்கம் கிறுக்கவும்" in dataText :
                 head.write(180)
 
-            elif "head right" in dataText or "headlight" in dataText:
+            elif "வலது பக்கம் தலையை நகர்த்தவும்" in dataText or "வலது பக்கம் தலையை திருப்பவும்" in dataText or "தலையை வலது பக்கம்திருப்பவும்" in dataText or "தலையை வலது பக்கம் கிறுக்கவும்" in dataText or "வல பக்கம் தலையை நகர்த்தவும்" in dataText or "வல பக்கம் தலையை திருப்பவும்" in dataText or "வல பக்கம் தலையை திருப்பவும்" in dataText or "தலையை வல பக்கம்திருப்பவும்" in dataText or "தலையை வல பக்கம் கிறுக்கவும்" in dataText :
                 head.write(0)
 
-            elif "head forward" in dataText or "look straight" in dataText:
+            elif "நேரே பார்க்கவும் " in dataText or "முன் நோக்கி பார்க்கவும்" in dataText or "தலையை முன் நோக்கி பார்க்கவும்" in dataText or "தலையை முன் பக்கம் வைக்கவும்" in dataText:
                 head.write(90)
 
         except Exception as e:
